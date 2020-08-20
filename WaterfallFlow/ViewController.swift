@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //MARK: - --- 视图已经加载
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataArr = [111,222,333,444,111,222,333,444,111,222,333,444,111,222,333,444]
+        self.dataArr = [333,222,333,444,111,222,333,444,111,222,333,444,111,222,333,444]
         self.createUI()
     }
     
@@ -77,6 +77,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath)
         cell.backgroundColor = .red
+        cell.layer.cornerRadius = 8
+        cell.layer.masksToBounds = true
         return cell
     }
         
