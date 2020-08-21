@@ -13,7 +13,7 @@ class WaterfallFlowLayout: UICollectionViewFlowLayout {
     var columnCount:Int = 0
     // 数据数组
     var dataArr = [Int]()
-    // 整个webview的高度
+    // 整个collectionView的高度
     private var maxH:Int?
     //所有item的属性
     fileprivate var layoutAttributesArray = [UICollectionViewLayoutAttributes]()

@@ -13,39 +13,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // 数据源
     var dataArr = [Int]()
     // 列数
-    var columnCount:Int = 2;
+    let columnCount:Int = 2;
     // 瀑布流布局
     var flowLayout: WaterfallFlowLayout!
-    
-    var itemWidth:CGFloat = 0
-    
-    var collectionView: UICollectionView!
+
     
     
     //MARK: - --- 视图已经加载
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataArr = [333,222,333,444,111,222,333,444,111,222,333,444,111,222,333,444]
+        self.dataArr = [300,200,300,400,100,200,300,400,100,200,300,400,100,200,300,400]
         self.createUI()
     }
     
-    //MARK: - --- 视图即将出现
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.tabBarController?.tabBar.isHidden = false
-    }
     
     //MARK: - --- 创建UI
     func createUI(){
         self.flowLayout = WaterfallFlowLayout()
         self.flowLayout.dataArr = self.dataArr
         let rect: CGRect = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
-        self.collectionView = UICollectionView.init(frame: rect, collectionViewLayout:self.flowLayout)
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.backgroundColor = UIColor.white
-        self.view.addSubview(self.collectionView)
-        self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "HomeCell")
+        let collectionView = UICollectionView.init(frame: rect, collectionViewLayout:self.flowLayout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = UIColor.white
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "HomeCell")
+        self.view.addSubview(collectionView)
 
         
         self.setWaterfallFlowLayouts()
@@ -54,15 +46,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //MARK: - --- 设置item的布局
     func setWaterfallFlowLayouts(){
-        //通过layout的一些参数设置item的宽度
-        let inset = UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
-        let minLine:CGFloat = 10.0
-        self.itemWidth = (SCREEN_WIDTH - inset.left - inset.right - minLine * (CGFloat(self.columnCount - 1))) / CGFloat(self.columnCount)
-        
         //设置布局属性
         self.flowLayout.columnCount = self.columnCount
-        self.flowLayout.sectionInset = inset
-        self.flowLayout.minimumLineSpacing = minLine
+        self.flowLayout.sectionInset = UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+        self.flowLayout.minimumLineSpacing = 10.0
+        self.flowLayout.minimumInteritemSpacing = 10.0
     }
     
     //MARK: - --- delegate，dataSource
@@ -82,10 +70,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
     }
         
-    
-    override var prefersStatusBarHidden : Bool {
-        return true
-    }
+
 
 }
 
