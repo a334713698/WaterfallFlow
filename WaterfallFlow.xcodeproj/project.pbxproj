@@ -14,7 +14,6 @@
 		7134933324EBAFAA00A24170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7134933224EBAFAA00A24170 /* Assets.xcassets */; };
 		7134933624EBAFAA00A24170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7134933424EBAFAA00A24170 /* LaunchScreen.storyboard */; };
 		71C350BE24EE3EDC006CF9AC /* WaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C350BD24EE3EDC006CF9AC /* WaterfallFlowLayout.swift */; };
-		71C350C024EE4DC7006CF9AC /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C350BF24EE4DC7006CF9AC /* Macro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		7134933524EBAFAA00A24170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7134933724EBAFAA00A24170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C350BD24EE3EDC006CF9AC /* WaterfallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallFlowLayout.swift; sourceTree = "<group>"; };
-		71C350BF24EE4DC7006CF9AC /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 				7134932B24EBAFA800A24170 /* SceneDelegate.swift */,
 				7134932D24EBAFA800A24170 /* ViewController.swift */,
 				71C350BD24EE3EDC006CF9AC /* WaterfallFlowLayout.swift */,
-				71C350BF24EE4DC7006CF9AC /* Macro.swift */,
 				7134932F24EBAFA800A24170 /* Main.storyboard */,
 				7134933224EBAFAA00A24170 /* Assets.xcassets */,
 				7134933424EBAFAA00A24170 /* LaunchScreen.storyboard */,
@@ -148,7 +145,6 @@
 				7134932E24EBAFA800A24170 /* ViewController.swift in Sources */,
 				7134932A24EBAFA800A24170 /* AppDelegate.swift in Sources */,
 				7134932C24EBAFA800A24170 /* SceneDelegate.swift in Sources */,
-				71C350C024EE4DC7006CF9AC /* Macro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
